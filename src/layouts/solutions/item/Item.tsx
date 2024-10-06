@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box, Typography} from "@mui/material";
+import {Grid2, Typography} from "@mui/material";
 
 type ItemProps = {
     content: React.ReactNode,
@@ -9,9 +9,11 @@ type ItemProps = {
 
 export const Item : React.FC<ItemProps> = ({content, title, description}) => {
     return (
-        <Box
-            flexGrow={1}
+        <Grid2
+            size={1}
             flexBasis={"300px"}
+            flexGrow={1}
+            flexShrink={1}
         >
             {content}
             <Typography
@@ -24,6 +26,6 @@ export const Item : React.FC<ItemProps> = ({content, title, description}) => {
             >
                 {description}
             </Typography>
-        </Box>
+        </Grid2>
     );
 };

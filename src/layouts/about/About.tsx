@@ -18,7 +18,7 @@ export const About = () => {
                 variant={"body1"}
                 marginTop={"14px"}
             >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Быстро получайте актуальные и достоверные новости без кликбейта и информационного шума. <Typography fontWeight={"bold"} display={"inline"}>dotnews</Typography> - это телеграм-бот, который предоставляет сжатую и персонализированную информацию из различных источников, позволяя вам экономить время и оставаться в курсе событий в любое время и в любом месте.
             </Typography>
         </Grid2>
     );

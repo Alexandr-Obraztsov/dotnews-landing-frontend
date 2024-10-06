@@ -27,11 +27,11 @@ export const Footer = () => {
                         fontWeight={"600"}
                         fontSize={"24px"}
                     >
-                        News
+                        .news
                     </Typography>
 
                     <Typography variant={"body1"}>
-                        Облачный мессенджер для мобильных устройств и компьютеров. Быстрый и безопасный.
+                        Экономьте время и оставайтесь в курсе всех событий.
                     </Typography>
                 </Grid2>
 

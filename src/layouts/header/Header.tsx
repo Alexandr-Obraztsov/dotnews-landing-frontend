@@ -26,7 +26,7 @@ export const Header: React.FC = () => {
 
     return (
         <StyledHeader>
-            <img src={logo} alt={"Logo"} width={"100px"}/>
+            <img src={logo} alt={"Logo"} width={"40px"}/>
             <Sphere size={"561px"} color={"rgba(50, 132, 207, 0.22)"} x={"90%"} y={"0"}/>
             <Sphere size={"468px"} color={"rgba(38, 164, 227, 0.22)"} x={"0%"} y={"0"}/>
             <Grid2
