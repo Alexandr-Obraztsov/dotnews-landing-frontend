@@ -7,6 +7,7 @@ export const About = () => {
             container
             direction={"column"}
             id={"about"}
+            marginTop={"120px"}
         >
             <Typography
                 variant={"h2"}

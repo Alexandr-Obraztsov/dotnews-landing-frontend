@@ -1,16 +1,16 @@
 import * as React from 'react';
 import {Box, Button, Grid2, Typography, useMediaQuery} from "@mui/material";
-import mainImage from "../../assets/images/main.png";
 import iconSvg from "../../assets/svgs/icon.svg";
 import {Link} from 'react-scroll';
 import {configs} from "../../configs";
+import iphone from "../../assets/images/iphone.png"
 
 export const Main: React.FC = () => {
     const matches = useMediaQuery('(min-width:980px)');
     const matches2 = useMediaQuery('(min-width:600px)');
 
     const handlerClick = () => {
-        fetch("http://62.169.28.6:8080/metrics/signal", {
+        fetch(`${configs.api_url}/metrics/signal`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export const Main: React.FC = () => {
             container
             id={"main"}
             marginTop={"124px"}
-            justifyContent={"center"}
+            justifyContent={"space-around"}
             alignItems={"center"}
             gap={"54px"}
             direction={matches ? "row" : "column"}
@@ -36,8 +36,6 @@ export const Main: React.FC = () => {
             <Grid2
                 container
                 direction={"column"}
-                width={"max-content"}
-                flexGrow={2}
                 alignItems={matches ? "flex-start" : "center"}
                 textAlign={matches ? "left" : "center"}
             >
@@ -100,18 +98,17 @@ export const Main: React.FC = () => {
 
             <Box
                 sx={{
-                    maxWidth: "600px",
-                    width: "100%",
-                    flexBasis: "400px",
-                    flexGrow: 1,
+                    flexGrow: 0,
                 }}
             >
                 <img
-                    src={mainImage}
+                    src={iphone}
                     alt="Бот телеграмм"
                     style={{
+                        maxHeight: "600px",
+                        objectFit: "contain",
                         width: "100%",
-                    }}
+                }}
                 />
             </Box>
         </Grid2>

@@ -45,7 +45,7 @@ export const Footer = () => {
                         backgroundColor: "#d7e3e9"
                     }}
                 >
-                    Возникли проблемы?
+                    Проблемы?
                     <Sphere size={"268px"} color={"rgba(50, 132, 207, 0.22)"} x={"50%"} y={"50%"}/>
 
                 </Button>
