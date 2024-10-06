@@ -7,16 +7,29 @@ import {configs} from "../../configs";
 
 export const Main: React.FC = () => {
     const matches = useMediaQuery('(min-width:980px)');
+    const matches2 = useMediaQuery('(min-width:600px)');
+
+    const handlerClick = () => {
+        fetch("http://62.169.28.6:8080/metrics/signal", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                userTelegramId: 0,
+                action: "LandingGoToBotClicked",
+            }),
+        })
+        window.open(configs.telegram.bot_url);
+    }
 
     return (
         <Grid2
             container
             id={"main"}
-            marginTop={"24px"}
-            paddingY={"124px"}
+            marginTop={"124px"}
             justifyContent={"center"}
             alignItems={"center"}
-            minHeight={"700px"}
             gap={"54px"}
             direction={matches ? "row" : "column"}
         >
@@ -27,11 +40,6 @@ export const Main: React.FC = () => {
                 flexGrow={2}
                 alignItems={matches ? "flex-start" : "center"}
                 textAlign={matches ? "left" : "center"}
-                sx={{
-                    media: {
-
-                    }
-                }}
             >
                 <img
                     src={iconSvg}
@@ -45,8 +53,9 @@ export const Main: React.FC = () => {
                 <Typography
                     variant={"h2"}
                     marginBlockStart={"32px"}
+                    fontSize={matches2 ? "50px" : "36px"}
                 >
-                    .news <br/>
+                    .news (beta) <br/>
                     <span style={{fontWeight: 250, color: "#4E585C"}}>Новая эра новостей</span>
                 </Typography>
 
@@ -63,6 +72,7 @@ export const Main: React.FC = () => {
                             maxWidth: "300px",
                             whiteSpace: "nowrap",
                         }}
+                        onClick={handlerClick}
                         href={configs.telegram.bot_url}
                     >
                         Открыть бота
@@ -101,7 +111,6 @@ export const Main: React.FC = () => {
                     alt="Бот телеграмм"
                     style={{
                         width: "100%",
-                        height: "100%",
                     }}
                 />
             </Box>

@@ -27,24 +27,25 @@ export const Footer = () => {
                         fontWeight={"600"}
                         fontSize={"24px"}
                     >
-                        .news
+                        .news (beta)
                     </Typography>
 
                     <Typography variant={"body1"}>
-                        Экономьте время и оставайтесь в курсе всех событий.
+                        @ Проект находится на стадии разработки.
                     </Typography>
                 </Grid2>
 
                 <Button
-                    href={configs.telegram.bot_url}
+                    variant={"contained"}
+                    href={configs.telegram.manager_url}
                     sx={{
                         flexGrow: 0,
                         padding: "10px 24px",
-                        color: "#229cd7",
-                        backgroundColor: "transparent",
+                        color: "#005a6f",
+                        backgroundColor: "#d7e3e9"
                     }}
                 >
-                    Открыть бота
+                    Возникли проблемы?
                     <Sphere size={"268px"} color={"rgba(50, 132, 207, 0.22)"} x={"50%"} y={"50%"}/>
 
                 </Button>
