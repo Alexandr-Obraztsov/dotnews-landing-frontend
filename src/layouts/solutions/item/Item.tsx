@@ -19,7 +19,10 @@ export const Item : React.FC<ItemProps> = ({content, title, description}) => {
             <Typography
                 marginTop={"14px"}
                 variant={"h3"}
-            >{title}</Typography>
+            >
+                {title}
+            </Typography>
+
             <Typography
                 variant={"body1"}
                 marginTop={"14px"}
