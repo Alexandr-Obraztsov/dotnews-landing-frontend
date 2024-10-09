@@ -10,7 +10,6 @@ export const Main: React.FC = () => {
     const matches2 = useMediaQuery('(min-width:600px)');
 
     const handlerClick = () => {
-        debugger
         fetch(`${configs.api_url}/metrics/signal`, {
             method: "POST",
             headers: {
@@ -21,6 +20,7 @@ export const Main: React.FC = () => {
                 action: "LandingGoToBotClicked",
             }),
         })
+        window.open(configs.telegram.bot_url, "_blank");
     }
 
     return (
@@ -53,8 +53,11 @@ export const Main: React.FC = () => {
                     marginBlockStart={"32px"}
                     fontSize={matches2 ? "50px" : "36px"}
                 >
-                    .news (beta) <br/>
-                    <span style={{fontWeight: 250, color: "#4E585C"}}>Новая эра новостей</span>
+                    .news (beta)
+                    <br/>
+                    <span style={{fontWeight: 250, color: "#4E585C"}}>
+                        Эра новых новостей.
+                    </span>
                 </Typography>
 
                 <Grid2
@@ -103,7 +106,9 @@ export const Main: React.FC = () => {
                 <img
                     src={iphone}
                     alt="Бот телеграмм"
+                    onClick={handlerClick}
                     style={{
+                        cursor: "pointer",
                         maxHeight: "600px",
                         objectFit: "contain",
                         width: "100%",

@@ -35,7 +35,7 @@ export const Solutions: React.FC = () => {
             direction={"column"}
         >
             <Typography variant={"h2"}>
-                Три причин пользоваться News
+                Три причины пользоваться <Typography fontWeight={"bold"} fontSize={"50px"} color={"primary"} display={"inline"}>.news</Typography>
             </Typography>
 
             <Grid2

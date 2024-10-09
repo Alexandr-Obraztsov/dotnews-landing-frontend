@@ -56,16 +56,7 @@ export const Header: React.FC = () => {
                 alignItems={"center"}
                 wrap={"nowrap"}
             >
-                <LanguageIcon sx={{color: "#808080"}}/>
-                <Select
-                    value={"ru"}
-                    size={"small"}
-                    variant={"outlined"}
 
-                >
-                    <option value={"ru"}>RU</option>
-                    <option value={"en"}>EN</option>
-                </Select>
             </Grid2>
         </StyledHeader>
     );

@@ -31,7 +31,7 @@ export const Footer = () => {
                     </Typography>
 
                     <Typography variant={"body1"}>
-                        @ Проект находится на стадии разработки.
+                        Проект находится на стадии разработки.
                     </Typography>
                 </Grid2>
 
