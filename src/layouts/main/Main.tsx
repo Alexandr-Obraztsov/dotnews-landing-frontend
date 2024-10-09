@@ -56,7 +56,7 @@ export const Main: React.FC = () => {
                     .news (beta)
                     <br/>
                     <span style={{fontWeight: 250, color: "#4E585C"}}>
-                        Эра новых новостей.
+                        Новая эра новостей.
                     </span>
                 </Typography>
 
